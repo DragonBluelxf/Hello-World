@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/1/iconfont.css">
+		<script src="../css/1/iconfont.js"></script>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+
+			#header {
+				height: 80px;
+				width: 100%;
+				background: royalblue;
+				line-height: 80px;
+				border-top: 5px solid dimgray;
+			}
+
+			.header_logo {
+				float: left;
+				color: white;
+				font-size: 25px;
+				margin-left: 10px;
+			}
+
+			.header_nav ul {
+				float: right;
+				list-style: none;
+				height: 20px;
+			}
+
+			.header_nav li {
+				margin-right: 25px;
+				float: left;
+			}
+
+			.header_nav a {
+				text-decoration: none;
+				color: white;
+				font-size: 14px;
+			}
+
+			.header_nav a:hover {
+				color: gray;
+			}
+
+			.header_nav span {
+				font-size: 20px;
+				position: relative;
+				top: 2px;
+				margin-right: 8px;
+			}
+
+			#menu {
+				width: 200px;
+				height: 665px;
+				background: dimgray;
+				text-align: center;
+				float: left;
+			}
+
+			#menu li {
+				height: 100px;
+				line-height: 50px;
+				padding: 50px 0;
+				border-top: 1px solid lightgrey;
+				border-bottom: 1px solid lightgray;
+			}
+
+			#menu li a {
+				text-decoration: none;
+				color: white;
+			}
+
+			#menu li p {
+				font-size: 50px;
+			}
+
+			#menu li:nth-child(1) {
+				background: gray;
+			}
+
+			#menu li:hover {
+				background: gray;
+			}
+
+			#main {
+				margin-left: 200px;
+				height: 665px;
+				width: calc(100% - 200px);
+			}
+
+			#main .instruction {
+				width: 100%;
+				height: 200px;
+				background: white;
+			}
+
+			#main .instruction ul {
+				list-style: none;
+				font-size: 16px;
+				color: lightgray;
+				margin-left: 30px;
+			}
+
+			#main .instruction ul li {
+				margin: 10px 0;
+			}
+
+			#main .instruction .project_info {
+				float: left;
+				width: 500px;
+				height: 100%;
+				font-size: 30px;
+			}
+
+			#main .instruction img {
+				width: 150px;
+				height: 150px;
+				position: absolute;
+				right: 50px;
+				top: 100px;
+			}
+
+			#main .instruction .project_info span {
+				font-size: 20px;
+				margin-left: 20px;
+			}
+
+			#main .instruction .project_info a:hover {
+				color: skyblue;
+			}
+
+			#main .details {
+				width: 100%;
+				height: 465px;
+			}
+
+			#main .details .details_menu ul {
+				width: 100%;
+				height: 45px;
+				background: #f0f7fc;
+				list-style: none;
+			}
+
+			#main .details .details_menu li {
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				margin-left: 10px;
+				border-radius: 5px;
+				background: white;
+				float: left;
+				position: relative;
+				top: 15px;
+				color: lightgray;
+			}
+
+			#main .details .details_menu ul li:last-child {
+				background: #0088ff;
+			}
+
+			#main .details .details_menu ul li:hover {
+				background: #0088ff;
+			}
+
+			#main .details .details_menu ul li:hover a {
+				color: white;
+			}
+
+			#main .details .details_menu a {
+				color: lightgray;
+			}
+
+			#main .details .details_menu ul li:last-child a {
+				color: white;
+			}
+
+			#main .details_button {
+				width: 100%;
+				height: 60px;
+				background: white;
+				line-height: 60px;
+			}
+
+			#main .details_button label {
+				margin-left: 20px;
+				float: left;
+				margin-top: 20px;
+				cursor: pointer;
+			}
+
+			#main .details_button input[type=file] {
+
+				display: none;
+			}
+
+			#main .details_button input[type=search] {
+				float: right;
+				margin-top: 20px;
+			}
+
+			#main .details_button span {
+				float: right;
+				cursor: pointer;
+			}
+
+			#main .details_button div {
+				width: 100px;
+				height: 20px;
+				background: url(../img/img03.jpeg) -50px -50px;
+				border-radius: 5px;
+			}
+
+			.details table {
+				width: calc(100% - 40px);
+				margin: 0 20px;
+				color: black;
+				text-align: center;
+			}
+
+			.details table tr:nth-child(1) {
+				color: gray;
+				background: lightgray;
+			}
+
+			.details table tr:hover {
+				background: lightgray;
+			}
+
+			.details .details_foot {
+				height: 128px;
+				width: 100%;
+			}
+
+			.details table tr:nth-child(1) td:nth-child(1) {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header">
+			<div class="header_logo">正达建筑内部管理平台</div>
+			<div class="header_nav">
+				<ul>
+					<li>
+						<span class="iconfont icondenglu"></span>
+						<a href="#">欢迎您，xx管理员</a>
+					</li>
+					<li>
+						<span class="iconfont iconxiugaimima"></span>
+						<a href="#">修改密码</a>
+					</li>
+					<li>
+						<span class="iconfont iconfangjian"></span>
+						<a href="#">公司官网</a>
+					</li>
+					<li>
+						<span class="iconfont icontuichu"></span>
+						<a href="#">退出</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="#">
+						<p class="iconfont iconxiangmuguanli-"></p>项目管理
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p class="iconfont iconManagement"></p>用户管理
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p class="iconfont iconxitongshezhi"></p>系统设置
+					</a>
+				</li>
+			</ul>
+		</div>
+		<main id="main">
+			<div class="instruction">
+				<div class="project_info">
+					青田高湾绿园一期、二期工程<a href=""><span class="iconfont iconxiugai"></span></a>
+					<ul>
+						<li>项目编号：XXXXXXXXX</li>
+						<li>项目类型：XXXX</li>
+						<li>项目负责人：XXXXXX</li>
+						<li>手机号：XXXXXXXXXX</li>
+					</ul>
+				</div>
+				<img src="../img/声之形男.png" alt="">
+			</div>
+			<div class="details">
+				<div class="details_menu">
+					<ul>
+						<li><a href="">视频监控</a></li>
+						<li><a href="">考勤管理</a></li>
+						<li><a href="">安全巡查</a></li>
+						<li><a href="">资料管理</a></li>
+					</ul>
+				</div>
+				<div class="details_button">
+					<label>
+						<input type="file">
+						<div></div>
+					</label>
+					<label>
+						<input type="file">
+						<div></div>
+					</label>
+					<span class="iconfont iconW"></span>
+					<input type="search" placeholder="请输入关键字">
+				</div>
+				<table cellspacing="0" align="center" border="1">
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>文档名称</td>
+						<td>文档大小</td>
+						<td>作者</td>
+						<td>上传时间</td>
+						<td colspan="2">操作</td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td width="20px" align="center"><span class="iconfont iconcheckbox"></span></td>
+						<td>
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#iconW"></use>
+							</svg>
+							XXXXXXXXXXXX.doc
+						</td>
+						<td>12.36KB</td>
+						<td>XXXX</td>
+						<td>2021-2-17</td>
+						<td><a href="" style="color: blue;"><span class="iconfont iconNMStubiao-"></span></a></td>
+						<td><a href="" style="color: red;"><span class="iconfont iconshanchu" style="font-size: 12px;"></span></a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="text"></td>
+						<td><input type="checkbox"></td>
+					</tr>
+				</table>
+				<div class="details_foot">
+					
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

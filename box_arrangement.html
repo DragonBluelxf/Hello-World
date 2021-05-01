@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局设计</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#header {
+				background-color: #E83828;
+				height: 50px;
+				position: fixed;
+				left: 0;	right: 0;
+			}
+			#header .head {
+				background-color: #808080;
+				height: 50px;width: 60%;margin: auto;
+				text-align: center;line-height: 50px;
+			}
+			#main {
+				background-color: slateblue;
+				height: 500px;
+			}
+			#part {
+				background-color: deeppink;margin: auto;
+				height: 200px;width: 60%;
+			}
+			#part .a {
+				width: 18%;	padding-left: 0.95%;	border-right: 1px dashed black;
+				height: 165px;	float: left;	padding-right: 0.95%;	padding-top: 25px;	padding-bottom: 10px;
+			}
+			#bottom {
+				background-color: #DDDDDD;height: 300px;
+			}
+			#bottom .case {
+				height: 220px;width: 32%;margin-right: 2%;
+				background-color: greenyellow;float: left;
+			}
+			#bottom p {
+				font-size: 20px;
+				color: dimgray;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="head">
+				主标题
+			</div>
+		</div>
+		<div id="main">
+			
+		</div>
+		<div id="part">
+			<div class="a" style="padding-left: 0;"></div>
+			<div class="a"></div>
+			<div class="a"></div>
+			<div class="a"></div>
+			<div class="a" style="border-right: 0;padding-right: 0;"></div>
+		</div>
+		<div id="bottom">
+			<div style="margin: auto;width: 60%;">
+				<h1>Case</h1>
+				<div class="case"></div>
+				<div class="case"></div>
+				<div class="case" style="margin-right: 0;"></div>
+				<p>查看更多+</p>
+			</div>
+		</div>
+	</body>
+</html>

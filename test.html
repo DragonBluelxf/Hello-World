@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="../tool.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				let getbtn = document.getElementById('getbtn');
+				let postbtn = document.getElementById('postbtn');
+				
+				getbtn.onclick = function(){
+					ajax({
+						method: get,
+						url: 'index.php',
+						data: {
+							username: 'xxx',
+							age: 18
+						},
+						success: function(){
+							alert('success');
+						},
+						error: function(){
+							alert('error');
+						}
+					})
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" id="getbtn">get</button>
+		<button type="button" id="postbtn">post</button>
+	</body>
+</html>

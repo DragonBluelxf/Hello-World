@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			#small {
+				width: 273px;
+				height: 173px;
+				position: relative;
+			}
+			
+			#small img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#mark {
+				width: 50px;
+				height: 50px;
+				background: white;
+				opacity: .5;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#big {
+				width: 100px;
+				height: 100px;
+				overflow: hidden;
+				position: absolute;
+				left: 300px;
+				top: 0;
+			}
+			
+			#big img {
+				width: 546px;
+				height: 346px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		<script type="text/javascript" src="../tool.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				let small = document.getElementById('small');
+				let big = document.getElementById('big');
+				let big_img = big.getElementsByTagName('img');
+				let mark = document.getElementById('mark');
+				small.onmouseover = function() {
+					mark.style.display = 'block';
+					big.style.display = 'block';
+				}
+				small.onmouseout = function() {
+					mark.style.display = 'none';
+					big.style.display = 'none';
+				}
+				small.onmousemove = function(ev) {
+					let e = ev || window.event;
+					let l = e.clientX - parseInt(getStyle(mark, 'width')) / 2;
+					let t = e.clientY - parseInt(getStyle(mark, 'height')) / 2;
+					if (l <= 0){
+						l = 0;
+					}
+					if (l >= parseInt(getStyle(small, 'width')) - parseInt(getStyle(mark, 'width'))) {
+						l = parseInt(getStyle(small, 'width')) - parseInt(getStyle(mark, 'width'));
+					}
+					if (t <= 0) {
+						t = 0;
+					}
+					if (t >= parseInt(getStyle(small, 'height')) - parseInt(getStyle(mark, 'height'))) {
+						t = parseInt(getStyle(small, 'height')) - parseInt(getStyle(mark, 'height'));
+					}
+					mark.style.left = l + 'px';
+					mark.style.top = t + 'px';
+					big_img[0].style.left = parseInt(getStyle(mark, 'left')) * -2 + 'px';
+					big_img[0].style.top = parseInt(getStyle(mark, 'top')) * -2 + 'px';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="small">
+			<img src="../img/6.jpg" alt="">
+			<div id="mark"></div>
+		</div>
+		<div id="big">
+			<img src="../img/6.jpg" alt="">
+		</div>
+	</body>
+</html>

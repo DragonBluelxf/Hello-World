@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="icon" type="/img/x-icon" href="http://www.mobiletrain.org/favicon.ico">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				width: 200px;
+				height: 200px;
+			}
+
+			figure {
+				width: 200px;
+				float: left;
+			}
+
+			.box {
+				height: 100px;
+				width: 100%;
+				background-color: yellow;
+				float: left;
+			}
+
+			.box p {
+				margin: 0 100px;
+			}
+			.loading {
+				width: 50px;
+				height: 50px;
+				margin: 30px auto;
+				position: relative;
+			}
+
+			.loading .box1,
+			.loading .box2 {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+
+			.loading .box2 {
+				transform: rotate(45deg);
+			}
+
+			.loading .box1 div,
+			.loading .box2 div {
+				animation: Load 1.6s linear infinite;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: blue;
+				position: absolute;
+			}
+
+			.loading .box1 div:nth-child(1) {
+				left: 0;
+				top: 0;
+			}
+
+			.loading .box1 div:nth-child(2) {
+				right: 0;
+				top: 0;
+			}
+
+			.loading .box1 div:nth-child(3) {
+				right: 0;
+				bottom: 0;
+			}
+
+			.loading .box1 div:nth-child(4) {
+				left: 0;
+				bottom: 0;
+			}
+
+			.loading .box2 div:nth-child(1) {
+				left: 0;
+				top: 0;
+			}
+
+			.loading .box2 div:nth-child(2) {
+				right: 0;
+				top: 0;
+			}
+
+			.loading .box2 div:nth-child(3) {
+				right: 0;
+				bottom: 0;
+			}
+
+			.loading .box2 div:nth-child(4) {
+				left: 0;
+				bottom: 0;
+			}
+
+			@keyframes Load {
+				0% {
+					transform: scale(1);
+				}
+
+				50% {
+					transform: scale(0);
+				}
+
+				100% {
+					transform: scale(1);
+				}
+			}
+
+			.loading .box1 div:nth-child(1) {
+				animation-delay: -1.4s;
+			}
+
+			.loading .box2 div:nth-child(1) {
+				animation-delay: -1.2s;
+			}
+
+			.loading .box1 div:nth-child(2) {
+				animation-delay: -1.0s;
+			}
+
+			.loading .box2 div:nth-child(2) {
+				animation-delay: -0.8s;
+			}
+
+			.loading .box1 div:nth-child(3) {
+				animation-delay: -0.6s;
+			}
+
+			.loading .box2 div:nth-child(3) {
+				animation-delay: -0.4s;
+			}
+
+			.loading .box1 div:nth-child(4) {
+				animation-delay: -0.2ss;
+			}
+
+			.loading .box2 div:nth-child(4) {
+				animation-delay: 0;
+			}
+			
+			.l, .r {
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			
+			.l {
+				margin-left: -100%;
+			}
+			
+			.r {
+				margin-left: -100px;
+			}
+		</style>
+	</head>
+	<body>
+		<header style="background-color: red;">
+			<hgroup>
+				<h1>主标题</h1>
+				<h2>副标题</h2>
+			</hgroup>
+			<nav>
+				<ul>
+					<li>首页</li>
+					<li>论坛</li>
+					<li>邮箱</li>
+				</ul>
+			</nav>
+		</header>
+		<main style="min-height: 200px;">
+			<article style="height: 100px;">
+				<input type="text" list="items">
+				<datalist id="items">
+					<option value="a"></option>
+					<option value="ab"></option>
+					<option value="abc"></option>
+					<option value="abcd"></option>
+				</datalist>
+				<details>
+					<summary>HTML</summary>
+					<p><mark>超文本语言</mark></p>
+				</details>
+				<meter min="0" max="100" low="60" high="80" value="55"></meter>
+				<progress min="0" max="10" value="8"></progress>
+			</article>
+		</main>
+		<div class="loading">
+			<div class="box1">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="box2">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="box">
+			<p>1111</p>
+		</div>
+		<div class="l"></div>
+		<div class="r"></div>
+	</body>
+</html>
